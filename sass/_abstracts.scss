@@ -1,0 +1,19 @@
+// Mixins
+
+// responsive design mixin
+@mixin mq($size) {
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
+
+// Functions
+
+// set text color
+@function set-text-color($color) {
+    @if (lightness($color) > 50) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}

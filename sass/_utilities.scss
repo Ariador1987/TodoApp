@@ -1,0 +1,63 @@
+%btn-shared {
+    width: 15%;
+    min-width: 4.8rem;
+    min-height: 4.8rem;
+    display: inline-block;
+    cursor: pointer;
+    color: $button-text-color;
+    border: 2px solid $textbox-border-color;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem ($color-black, 0.3);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    @extend %btn-shared;
+    background-color: $color-green-light;
+    outline: none;
+    font-size: 1.5rem;
+
+    @include mq(768px) {
+        font-size: 2rem;
+    }
+
+    &:hover,
+    &:focus {
+        filter: brightness(120%);
+    }
+
+    &-clear {
+        @extend %btn-shared;
+        background-color: $button-clear-color;
+
+        @include mq(768px) {
+            padding: 0 0.5rem;
+        }
+
+        &:hover,
+        &:focus {
+            filter: brightness(120%);
+        }
+    }
+}
+
+.list {
+    &-container {
+        min-height: 60vh;
+        padding: 0.75rem;
+    }
+}
+
+.m {
+    &y {
+        &-1 {
+            margin: 0.5rem 0;
+        }
+        &-2 {
+            margin: 1.5rem 0;
+        }
+    }
+}
